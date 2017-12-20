@@ -9,6 +9,7 @@ import pprint
 import requests
 import sys
 import urllib
+from config import API_KEY
 
 # This client code can run on Python 2.x or 3.x.  Your imports can be
 # simpler if you only need one of those.
