@@ -1,0 +1,93 @@
+input.input-inline {
+  display:inline;
+  max-width: 300px;
+  margin-left: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f5f7fa;
+  color: #f5f7fa;
+  line-height: 1;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+input.button.outline {
+  background: transparent;
+  border-color: #f5f7fa;
+  color: #f5f7fa;
+  margin-top: 5px;
+}
+
+input.button.outline:hover,
+input.button.outline:focus,
+input.button.outline:active {
+  background-color: #f5f7fa;
+  color: #495a67;
+}
+
+.main-img {
+  max-width: 500px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.container.center {
+  margin: 0 auto;
+}
+
+.contact.subtitle {
+    margin-bottom: 5px;
+}
+
+small {
+  font-size: 10px;
+}
+
+a.hover {
+  text-decoration:none;
+}
+
+a.hover:hover {
+  text-decoration: underline;
+}
+
+#bottom_nav {
+    width:100%;
+    margin: 25px;
+    position:absolute;
+    bottom:0px;
+    text-align:center;
+    z-index:9999;
+
+}
+
+#nextForm {
+  display:none;
+}
+
+.yelp-logo {
+  margin-left: 2px;
+  height: 22px;
+  vertical-align: top;
+}
+
+.bottomFooter {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 9999;
+    padding-bottom: 15px;
+}
+
+#nextUl li {
+  display:inline;
+  margin: 15px;
+
+}
