@@ -34,4 +34,4 @@ def homePost():
 if __name__ == '__main__':
 	app.run(debug=True)
 
-from yelp import *
+from yelp import search, query_api, getReviews
