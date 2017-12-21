@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from yelp import search, query_api
+
 
 app = Flask(__name__)
 
@@ -15,6 +15,8 @@ def homePost():
 	if not term or not location:
 		return render_template("home.html", result=None)
 
+	from yelp import * 
+	
 	result = search(term, location)
 	global reviews
 	if result.get('businesses') is None:
