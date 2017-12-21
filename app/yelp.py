@@ -3,7 +3,6 @@
 from __future__ import print_function
 from random import *
 
-import argparse
 import json
 import pprint
 import requests

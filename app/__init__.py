@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+from yelp import search, query_api, getReviews
 
 app = Flask(__name__)
 
@@ -17,21 +17,20 @@ def homePost():
 
 
 
-	result = search(term, location)
-	global reviews
-	if result.get('businesses') is None:
-		retValue = None
-		reviews = None
-	else:
-		retValue = query_api(result)
-		if retValue is None:
-			reviews = None
-		else:
-			reviews=getReviews(retValue)
+	# result = search(term, location)
+	# global reviews
+	# if result.get('businesses') is None:
+	# 	retValue = None
+	# 	reviews = None
+	# else:
+	# 	retValue = query_api(result)
+	# 	if retValue is None:
+	# 		reviews = None
+	# 	else:
+	# 		reviews=getReviews(retValue)
 
-	return render_template('item.html', object=result, result=retValue, reviews=reviews, text=term, location=location)
-
+	# return render_template('item.html', object=result, result=retValue, reviews=reviews, text=term, location=location)
+	return "Hello"
 if __name__ == '__main__':
 	app.run(debug=True)
 
-from yelp import search, query_api, getReviews
