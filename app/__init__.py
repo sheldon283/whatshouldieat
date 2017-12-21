@@ -15,8 +15,8 @@ def homePost():
 	if not term or not location:
 		return render_template("home.html", result=None)
 
-	from yelp import * 
-	
+	from yelp import search, query_api, getReviews
+
 	result = search(term, location)
 	global reviews
 	if result.get('businesses') is None:
