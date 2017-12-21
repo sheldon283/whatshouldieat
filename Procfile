@@ -1,1 +1,1 @@
-web: python generator.py
+web: python app/generator.py
