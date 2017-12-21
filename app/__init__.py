@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
-import yelp
+from yelp import yelp
 
-Yelp = yelp
-y = Yelp.yelp()
+y = yelp()
 app = Flask(__name__)
 
 @app.route('/')
