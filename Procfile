@@ -1,1 +1,1 @@
-web: python app/generator.py
+web: gunicorn app:app --log-file=-
