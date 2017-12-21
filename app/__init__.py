@@ -15,7 +15,7 @@ def homePost():
 	if not term or not location:
 		return render_template("home.html", result=None)
 
-	from yelp import search, query_api, getReviews
+
 
 	result = search(term, location)
 	global reviews
@@ -34,3 +34,4 @@ def homePost():
 if __name__ == '__main__':
 	app.run(debug=True)
 
+from yelp import *
