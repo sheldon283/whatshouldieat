@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Should I Eat?</title>
+  <meta name="author" content="Sheldon Dong">
+  <meta name="description" content="">
+  <meta name="keywords" content="restaurants,random,where,should,eat,food,indecisive,drinks,generator">
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+ 
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+  <title>What should I eat?</title>
+</head>
+
+<body>
+
+	  <section class="hero is-primary is-bold is-fullheight">
+      <div class="hero-body">
+        <div class="container is-fluid has-text-centered">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+
+      {% block footer %}
+      {% endblock %}
+
+     </section>
+
+
+    <!-- javascript -->
+    {% block javascript %}
+    {% endblock %}
+</body>
+
+
+</html>
