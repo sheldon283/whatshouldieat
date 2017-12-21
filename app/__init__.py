@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from yelp import * 
+from yelp import search, query_api
 
 app = Flask(__name__)
 
