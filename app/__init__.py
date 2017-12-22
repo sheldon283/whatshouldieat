@@ -1,15 +1,9 @@
 from flask import Flask, render_template, request
 import sys
-from .testPy import test
 from .yelpLib import test
-
-testPy.test()
-print(testPy)
-sys.stdout.flush()
-
 app = Flask(__name__)
 
-yelp.test()
+test()
 @app.route('/')
 def home():
     return render_template("home.html")
