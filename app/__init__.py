@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
-import yelp.yelpLib
 import sys
 import testPy
+import yelp.yelpLib
 
 testPy.test()
 print(testPy)
