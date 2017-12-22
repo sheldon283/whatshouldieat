@@ -1,6 +1,13 @@
 from flask import Flask, render_template, request
 import yelpLib as yelp
 import sys
+import testPy
+
+testPy.test()
+print(testPy)
+sys.stdout.flush()
+
+
 
 print(yelp)
 sys.stdout.flush()
