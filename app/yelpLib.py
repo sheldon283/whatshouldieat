@@ -8,7 +8,7 @@ import pprint
 import requests
 import sys
 import urllib
-from .config import API_KEY
+
 
 # This client code can run on Python 2.x or 3.x.  Your imports can be
 # simpler if you only need one of those.
@@ -22,6 +22,8 @@ except ImportError:
     from urllib2 import HTTPError
     from urllib import quote
     from urllib import urlencode
+
+API_KEY = 'iXl3qJk4-ch7g-6D5n8H4d10dKKu0Y2o3M4Ej_n1okbf9iND19pmKNgJgnUHLLfEWRvA8txA4v3LNhQmigB9DrqvRBYCuledGj3CnJnBt8wmxqAzSkZSlQlMAgY3WnYx'
 
 # API constants, you shouldn't have to change these.
 API_HOST = 'https://api.yelp.com'
