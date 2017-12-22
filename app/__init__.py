@@ -6,6 +6,7 @@ print(yelp)
 sys.stdout.flush()
 app = Flask(__name__)
 
+yelp.test()
 @app.route('/')
 def home():
     return render_template("home.html")
@@ -20,17 +21,17 @@ def homePost():
 
 
 
-	result = search(term, location)
+	result = yelp.search(term, location)
 	global reviews
 	if result.get('businesses') is None:
 		retValue = None
 		reviews = None
 	else:
-		retValue = query_api(result)
+		retValue = yelp.query_api(result)
 		if retValue is None:
 			reviews = None
 		else:
-			reviews=getReviews(retValue)
+			reviews=yelp.getReviews(retValue)
 
 	return render_template('item.html', object=result, result=retValue, reviews=reviews, text=term, location=location)
 
