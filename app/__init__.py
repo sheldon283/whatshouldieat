@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
-from yelpLib import test
+import yelp	
 import sys
 
-# print(test)
-# sys.stdout.flush()
+print(yelp)
+sys.stdout.flush()
 app = Flask(__name__)
 
-test()
+yelp.test()
 @app.route('/')
 def home():
     return render_template("home.html")
@@ -21,17 +21,17 @@ def homePost():
 
 
 
-	result = yelpLib.search(term, location)
+	result = yelp.search(term, location)
 	global reviews
 	if result.get('businesses') is None:
 		retValue = None
 		reviews = None
 	else:
-		retValue = yelpLib.query_api(result)
+		retValue = yelp.query_api(result)
 		if retValue is None:
 			reviews = None
 		else:
-			reviews=yelpLib.getReviews(retValue)
+			reviews=yelp.getReviews(retValue)
 
 	return render_template('item.html', object=result, result=retValue, reviews=reviews, text=term, location=location)
 
