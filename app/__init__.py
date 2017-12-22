@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import yelp	
+import yelp.__init__
 import sys
 
 print(yelp)
