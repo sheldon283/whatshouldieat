@@ -37,9 +37,6 @@ DEFAULT_LOCATION = 'San Francisco, CA'
 
 SEARCH_LIMIT = 50
 
-def test():
-    pass
-
 def ask(host, path, api_key, url_params=None):
     # """Given your API_KEY, send a GET request to the API.
     # Args:
