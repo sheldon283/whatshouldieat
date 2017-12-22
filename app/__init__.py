@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
-import yelpLib
+import yelp	
 import sys
 
-print(yelpLib)
+print(yelp)
 sys.stdout.flush()
 app = Flask(__name__)
 
