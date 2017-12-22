@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
-from yelp import *	
+import yelp	
 
-test();
+yelp.test();
 
 app = Flask(__name__)
 
