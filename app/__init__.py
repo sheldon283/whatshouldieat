@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
-import yelp	
+from yelpLib import *
 import sys
 
-print(yelp)
-sys.stdout.flush()
 app = Flask(__name__)
 
 @app.route('/')
@@ -17,8 +15,6 @@ def homePost():
 
 	if not term or not location:
 		return render_template("home.html", result=None)
-
-
 
 	result = search(term, location)
 	global reviews
