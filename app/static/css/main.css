@@ -33,6 +33,7 @@ input.button.outline:active {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 20px;
+  border-radius: 30px;
 }
 
 .container.center {
