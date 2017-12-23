@@ -8,7 +8,7 @@ import pprint
 import requests
 import sys
 import urllib
-import .config
+import config
 
 try:
     # For Python 3.0 and later
