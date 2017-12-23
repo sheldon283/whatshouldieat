@@ -8,10 +8,8 @@ import pprint
 import requests
 import sys
 import urllib
+import .config
 
-
-# This client code can run on Python 2.x or 3.x.  Your imports can be
-# simpler if you only need one of those.
 try:
     # For Python 3.0 and later
     from urllib.error import HTTPError
@@ -23,9 +21,7 @@ except ImportError:
     from urllib import quote
     from urllib import urlencode
 
-API_KEY = 'iXl3qJk4-ch7g-6D5n8H4d10dKKu0Y2o3M4Ej_n1okbf9iND19pmKNgJgnUHLLfEWRvA8txA4v3LNhQmigB9DrqvRBYCuledGj3CnJnBt8wmxqAzSkZSlQlMAgY3WnYx'
-
-# API constants, you shouldn't have to change these.
+# API constants
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
 BUSINESS_PATH = '/v3/businesses/'  # Business ID will come after slash.
@@ -33,7 +29,6 @@ BUSINESS_PATH = '/v3/businesses/'  # Business ID will come after slash.
 # Default values.
 DEFAULT_TERM = 'dinner'
 DEFAULT_LOCATION = 'San Francisco, CA'
-
 
 SEARCH_LIMIT = 50
 
@@ -55,7 +50,6 @@ def ask(host, path, api_key, url_params=None):
         'Authorization': 'Bearer %s' % api_key,
     }
 
-    print(u'Querying {0} ...'.format(url))
     response = requests.request('GET', url, headers=headers, params=url_params)
     return response.json()
 
@@ -73,7 +67,6 @@ def search(keyword, location):
         'location': location.replace(' ', '+'),
         'limit': SEARCH_LIMIT
     }
-    print(type(ask(API_HOST, SEARCH_PATH, API_KEY, url_params=url_params)))
     return ask(API_HOST, SEARCH_PATH, API_KEY, url_params=url_params)
 
 def query_api(response):
@@ -88,7 +81,6 @@ def query_api(response):
     if (length == 0):
         return None
     x = randint(0,length-1)
-    print(type(businesses[x]['rating']))
     return businesses[x]
 
 def getReviews(business):

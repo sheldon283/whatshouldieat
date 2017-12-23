@@ -15,8 +15,6 @@ def homePost():
 	if not term or not location:
 		return render_template("home.html", result=None)
 
-
-
 	result = search(term, location)
 	global reviews
 	if result.get('businesses') is None:
