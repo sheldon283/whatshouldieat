@@ -8,7 +8,8 @@ import pprint
 import requests
 import sys
 import urllib
-import config
+import os
+
 
 try:
     # For Python 3.0 and later
@@ -21,6 +22,7 @@ except ImportError:
     from urllib import quote
     from urllib import urlencode
 
+API_KEY = os.environ.get('YELP_API_KEY')
 # API constants
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
